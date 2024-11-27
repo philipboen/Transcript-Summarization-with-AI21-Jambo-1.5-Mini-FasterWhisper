@@ -5,8 +5,8 @@ This mini-project demonstrates how to use FastAPI to create an application for s
 ### Components
 
 - **FastAPI**: A modern web framework for building APIs with Python.
-- **AI21 Jambo 1.5 Mini**: A pre-trained language model for text generation and summarization.
-- **Faster-Whisper**: A pre-trained model for audio transcription.
+- **AI21 Jambo 1.5 Mini**: A state-of-the-art, hybrid SSM-Transformer.
+- **Faster-Whisper**: A fast reimplementation of OpenAI's Whisper model using CTranslate2.
 
 ### How to Test the Application
 
