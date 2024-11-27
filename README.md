@@ -11,24 +11,35 @@ This mini-project demonstrates how to use FastAPI to create an application for s
 ### How to Test the Application
 
 1. **Clone the repository**:
-    ```bash
-    git clone <repository-url>
-    ```
+
+   ```bash
+   git clone <repository-url>
+   ```
 
 2. **Install the required dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
-3. **Start the FastAPI server**:
-    ```bash
-    uvicorn main:app --reload
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-    This will start the FastAPI server, and you can access the application at `http://localhost:8000`.
+3. **Set the API keys**:
 
-4. **Test the application**:
-    - Open the Swagger UI at `http://localhost:8000/docs`.
-    - Paste a YouTube video link or upload an audio file.
-    - The application will return a summary of the transcript.
+   - Create a `.env` file in the root directory.
+   - Add the following environment variables to the `.env` file:
+     ```bash
+     GITHUB_TOKEN=<your-github-token>
+     ```
+    - Replace `<your-github-token>` with your GitHub token. This token will allow you to access the models in the GitHub Marketplace, like AI21 Jambo 1.5 Mini.
 
+4. **Start the FastAPI server**:
+
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+   This will start the FastAPI server, and you can access the application at `http://localhost:8000`.
+
+5. **Test the application**:
+   - Open the Swagger UI at `http://localhost:8000/docs`.
+   - Paste a YouTube video link or upload an audio file. There is a sample audio file in the `/audio/test` directory.
+   - The application will return a summary of the transcript.
