@@ -84,7 +84,7 @@ async def getTranscriptfromAudio(
         if not file.filename.endswith((".mp3", ".wav")):
             raise HTTPException(status_code=400, detail="Unsupported file format")
 
-        folder = "/audio/uploads"
+        folder = "audio/uploads"
         os.makedirs(folder, exist_ok=True)
 
         # Save the uploaded file
