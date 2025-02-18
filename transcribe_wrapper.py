@@ -36,6 +36,7 @@ def transcribe_audio(audio_file):
             for segment in segments:
                 print(segment.text)
                 transcription_texts.append(segment.text)
+
             end_time = time.time()
             duration_minutes = (end_time - start_time) / 60
             print(f"Transcription took {duration_minutes:.2f} minutes.")
@@ -68,6 +69,7 @@ def transcribe_audio(audio_file):
                 for segment in segments:
                     print(segment.text)
                     transcription_texts.append(segment.text)
+
                 chunk_end = time.time()
                 duration_minutes = (chunk_end - chunk_start) / 60
                 print(
@@ -79,7 +81,8 @@ def transcribe_audio(audio_file):
                     print(f"Removed temporary file: {temp_chunk_path}")
 
         # Combine transcriptions from all segments/chunks
-        output_text = " ".join(transcription_texts)
+        output_text = "".join(transcription_texts)
+        output_text = output_text.lstrip()
         return output_text, None
 
     except Exception as e:
